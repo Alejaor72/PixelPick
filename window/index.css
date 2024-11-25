@@ -1,0 +1,295 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background-color: #1f1526;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.rectangle {
+    position: absolute;
+    width: 85%;
+    object-fit: cover;
+}
+.Banner{
+   display: flex;
+   justify-content: space-between;
+   flex-direction: row;
+   position: relative;
+   width: 85%;
+   margin-top: 5%;
+}
+.text-wrapper {
+    height: 100%;
+    position: relative;
+    margin-top: 8%;
+    left: -20%;
+    background: linear-gradient(
+      180deg,
+      rgb(255, 255, 255) 0%,
+      rgb(216.56, 150.17, 255) 100%
+    );
+    -webkit-background-clip: text !important;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Fustat", sans-serif;
+    font-weight: 800;
+    color: transparent;
+    font-size:2em;
+    letter-spacing: 0;
+    line-height: 1.9rem;
+  }
+  
+.leftPartBanner {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    flex: 0 0 auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.Logo{
+    height: 45%;
+}
+
+.pixel-pick {
+    position: relative;
+    width: fit-content;
+    font-family: "Gasoek One", sans-serif;
+    font-weight: 400;
+    color: transparent;
+    font-size: 1.8em;
+    letter-spacing: 0;
+    line-height: normal;
+}
+  
+.span {
+    color: #ffffff;
+  }
+  
+.text-wrapper-2 {
+    color: #a411fa;
+}
+  
+.RightPartBanner{
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    flex: 0 0 auto;
+    width: max-content;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    margin-right: 2%;
+}
+  
+.consigue-una {
+    position: relative;
+    font-family: "Fustat", sans-serif;
+    font-weight: 800;
+    color: #e9c3ff;
+    font-size: 0.86em;
+    letter-spacing: 0;
+    line-height: normal;
+}
+  
+.mdi-steam {
+    height: 45%;
+    margin-left: 2%;
+}
+  
+  .macbook-pro .text-wrapper-3 {
+    position: absolute;
+    top: 642px;
+    left: 201px;
+    font-family: "Fustat", sans-serif;
+    font-weight: 800;
+    color: #ffffff;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 55.4px;
+    white-space: nowrap;
+  }
+  
+  .macbook-pro .frame-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 1287px;
+    align-items: flex-start;
+    gap: 10px;
+    position: absolute;
+    top: 727px;
+    left: 201px;
+  }
+  
+  .macbook-pro .frame-3 {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  
+  .macbook-pro .frame-4 {
+    position: relative;
+    width: 530px;
+    height: 372px;
+    border-radius: 20px;
+    background-image: url(./img/frame-3.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .macbook-pro .frame-5 {
+    position: relative;
+    width: 530px;
+    height: 372px;
+    border-radius: 20px;
+    background-image: url(./img/image.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .macbook-pro .frame-6 {
+    position: relative;
+    width: 530px;
+    height: 372px;
+    margin-right: -357.00px;
+    border-radius: 20px;
+    background-image: url(./img/frame-4.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .macbook-pro .rectangle-2 {
+    position: absolute;
+    width: 1312px;
+    height: 1483px;
+    top: 1180px;
+    left: 201px;
+    border-radius: 30px;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(233.31, 195.85, 255, 0.12) 100%
+    );
+  }
+  
+  .macbook-pro .text-wrapper-4 {
+    position: absolute;
+    top: 1680px;
+    left: 308px;
+    font-family: "Fustat", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .macbook-pro .sistema-de {
+    position: absolute;
+    width: 389px;
+    top: 1268px;
+    left: 308px;
+    background: linear-gradient(180deg, rgb(255, 255, 255) 0%);
+    -webkit-background-clip: text !important;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Fustat", sans-serif;
+    font-weight: 800;
+    color: transparent;
+    font-size: 48px;
+    letter-spacing: 0;
+    line-height: 46px;
+  }
+  
+  .macbook-pro .frame-7 {
+    position: absolute;
+    width: 555px;
+    height: 76px;
+    top: 1423px;
+    left: 308px;
+    background-color: #d9d9d966;
+    border-radius: 20px;
+    border: 1px solid;
+    border-color: #ffffff;
+  }
+  
+  .macbook-pro .weui-arrow-filled {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    top: 22px;
+    left: 476px;
+  }
+  
+  .macbook-pro .p {
+    position: absolute;
+    top: 21px;
+    left: 37px;
+    font-family: "Fustat", sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .macbook-pro .frame-8 {
+    position: absolute;
+    width: 555px;
+    height: 76px;
+    top: 1423px;
+    left: 900px;
+    background-color: #d9d9d966;
+    border-radius: 20px;
+    border: 1px solid;
+    border-color: #ffffff;
+  }
+  
+  .macbook-pro .group {
+    position: absolute;
+    width: 374px;
+    height: 84px;
+    top: 1535px;
+    left: 308px;
+  }
+  
+  .macbook-pro .overlap-group {
+    position: relative;
+    width: 372px;
+    height: 84px;
+    background-color: #b12cfe;
+    border-radius: 20px;
+  }
+  
+  .macbook-pro .text-wrapper-5 {
+    position: absolute;
+    top: 25px;
+    left: 45px;
+    font-family: "Fustat", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
