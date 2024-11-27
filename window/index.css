@@ -169,6 +169,14 @@ button{
     padding: 1.8%;
     margin-top: 3%;
 }
+button:hover {
+    background-color: #d991f4; 
+    transform: scale(1.05); 
+}
+
+button:active {
+    transform: scale(0.95);
+}
 #recommendation-section{
     margin-top: 3%;
     font-family: "Fustat", sans-serif;
@@ -184,3 +192,18 @@ button{
     margin-top: 2%;
 }
 
+ul {
+    font-family: "Fustat", sans-serif;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+ul li {
+    color: white;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border: 1px solid #333; 
+    border-radius: 10px; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
