@@ -2,7 +2,7 @@ import pandas as pd
 from flask import Flask, request, jsonify, render_template
 from data import get_recommendations
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 
 # Cargar datos
 games_data = pd.read_csv('./datasets/games.csv')
