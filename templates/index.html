@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PixelPick</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/static/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&family=Gasoek+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img class="rectangle" src="img/rectangle _1.png" />
+        <img class="rectangle" src="/static/img/rectangle _1.png" />
         <div class="Banner">
             <div class="leftPartBanner">
-                <img class="Logo" src="img/alien monster emoji.png" />
+                <img class="Logo" src="/static/img/alien monster emoji.png" />
                 <p class="pixel-pick"><span class="span">PIXEL</span> <span class="text-wrapper-2">PICK</span></p>
             </div>
             <div class="RightPartBanner">
                 <div class="consigue-una">Consigue Una Recomendación</div>
-                <img class="mdi-steam" src="img/mdi_steam.svg" />
+                <img class="mdi-steam" src="/static/img/mdi_steam.svg" />
               </div>
         </div>
         <p class="text-wrapper">Recomendaciones <br />personalizadas para <br />gamers como tú</p>
@@ -35,7 +35,7 @@
                       </select>
                       <select id="method-select">
                         <option value="">Selecciona un metodo</option>
-                        <option value="average">Average</option>
+                        <option value="average">Promedio</option>
                         <option value="minimum_misery">Minimum Misery</option>
                         <option value="maximum_pleasure">Maximum Pleasure</option>
                       </select>
@@ -46,16 +46,16 @@
             <section id="recommendation-section">
                 <h1>Recomendación:</h1>
               
-                <h3>Top 10 Songs</h3>
-                <ul id="top-songs"></ul>
+                <h3>Top 10 videojuegos</h3>
+                <ul id="top-videogames"></ul>
               
-                <h3>Top 5 Albums</h3>
-                <ul id="top-albums"></ul>
+                <h3>Top 5 Categorias</h3>
+                <ul id="top-categories"></ul>
               
-                <h3>Top 5 Artists</h3>
-                <ul id="top-artists"></ul>
+                <h3>Top 5 Año de Lanzamiento</h3>
+                <ul id="top-year"></ul>
               
-                <h3>Top 3 Similar Users</h3>
+                <h3>Top 3 Usuarios similares</h3>
                 <ul id="similar-users"></ul>
               </section>
         </main>
