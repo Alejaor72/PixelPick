@@ -24,17 +24,41 @@
         </div>
         <p class="text-wrapper">Recomendaciones <br />personalizadas para <br />gamers como tú</p>
     </header>
-    <div class="text-wrapper-4">Recomendación:</div>
-          <div class="sistema-de">Sistema de <br />Recomendación</div>
-          <select class="frame-7">
-            <option value="">Selecciona la categoría que te guste</option>
-          </select>
-          <select class="frame-8">
-            <option value="">Selecciona un año de lanzamiento</option>
-          </select>
-          <div class="group">
-            <div class="overlap-group"><button class="text-wrapper-5">Obtener Recomendación</button></div>
-          </div>
-    </div>
+    <section class="recomendacionesDiv">
+        <h2>Sistema de <br />Recomendación</h2>
+        <main>
+            <section id="user-section" class="usersection">
+                <div class="Selectsdiv">
+                    <select id="user-select">
+                        <option value="">Selecciona el usuario que desees</option>
+                        <!-- Opciones dinámicas -->
+                      </select>
+                      <select id="method-select">
+                        <option value="">Selecciona un metodo</option>
+                        <option value="average">Average</option>
+                        <option value="minimum_misery">Minimum Misery</option>
+                        <option value="maximum_pleasure">Maximum Pleasure</option>
+                      </select>
+                </div>
+                <button id="get-recommendations">Obtener Recomendación</button>
+            </section>
+
+            <section id="recommendation-section">
+                <h1>Recomendación:</h1>
+              
+                <h3>Top 10 Songs</h3>
+                <ul id="top-songs"></ul>
+              
+                <h3>Top 5 Albums</h3>
+                <ul id="top-albums"></ul>
+              
+                <h3>Top 5 Artists</h3>
+                <ul id="top-artists"></ul>
+              
+                <h3>Top 3 Similar Users</h3>
+                <ul id="similar-users"></ul>
+              </section>
+        </main>
+    </section>
 </body>
 </html>
