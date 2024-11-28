@@ -12,13 +12,19 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("/users")
         .then(response => response.json())
         .then(data => {
+            if (!Array.isArray(data)) {
+                console.error("La respuesta no es un arreglo:", data);
+                alert("Error al cargar usuarios. Verifique el backend.");
+                return;
+            }
             data.forEach(user => {
                 const option = document.createElement("option");
                 option.value = user.user_id;
                 option.textContent = user.user_id;
                 userSelect.appendChild(option);
             });
-        });
+        })
+        .catch(err => console.error("Error al obtener usuarios:", err));
 
     // Obtener recomendaciones al hacer clic en el botón
     getRecommendationsBtn.addEventListener("click", () => {

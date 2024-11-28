@@ -3,16 +3,27 @@ import pandas as pd
 def get_recommendations(user_row, method, users_data, games_data, gamesCategories_data):
     # Obtener datos del usuario
     user_categories = user_row['categories'].split(', ')
-    user_years = [int(year.strip()) for year in user_row['release year'].split(', ')]
+    user_years = [
+        int(year.strip()) for year in user_row['release year'].split(', ')
+        if year.strip().isdigit()
+    ]
 
     # Filtrar juegos por categorías y años
-    filtered_games = games_data[
-        games_data['app_id'].isin(
-            gamesCategories_data[gamesCategories_data['categories'].isin(user_categories)]['app_id']
-        )
-    ]
+    relevant_app_ids = gamesCategories_data[
+        gamesCategories_data['categories'].isin(user_categories)
+    ]['app_id']
+
+    if relevant_app_ids.empty:
+        print(f"No se encontraron categorías coincidentes para el usuario: {user_row['user_id']}")
+        return {"error": "No se encontraron juegos para las categorías seleccionadas"}
+
+    filtered_games = games_data[games_data['app_id'].isin(relevant_app_ids)]
     filtered_games['release_date'] = pd.to_datetime(filtered_games['release_date'], errors='coerce')
     filtered_games = filtered_games[filtered_games['release_date'].dt.year.isin(user_years)]
+
+    if filtered_games.empty:
+        print(f"No se encontraron juegos para los años seleccionados por el usuario: {user_row['user_id']}")
+        return {"error": "No se encontraron juegos para los años seleccionados"}
 
     # Ordenar juegos por el método seleccionado
     if method == 'average':
@@ -28,7 +39,10 @@ def get_recommendations(user_row, method, users_data, games_data, gamesCategorie
     top_games = filtered_games.sort_values('score', ascending=(method == 'minimum_misery')).head(10)
 
     # Calcular categorías y años más populares
-    top_categories = gamesCategories_data[gamesCategories_data['app_id'].isin(top_games['app_id'])]['categories'].value_counts().head(5).index.tolist()
+    top_categories = gamesCategories_data[
+        gamesCategories_data['app_id'].isin(top_games['app_id'])
+    ]['categories'].value_counts().head(5).index.tolist()
+
     top_years = top_games['release_date'].dt.year.value_counts().head(5).index.tolist()
 
     # Encontrar usuarios similares
